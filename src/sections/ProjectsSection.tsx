@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+﻿import { motion } from 'framer-motion';
 
 const technologies = ['React', 'Python', 'SQL', 'HTML', 'CSS', 'VS Code'];
 
@@ -17,6 +17,9 @@ function ProjectsSection() {
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-cyber-text/90 sm:text-base">
             A React-based web application that builds optimal teams based on user-owned characters. Integrated AI logic
             for synergy calculation and team optimization.
+          </p>
+          <p className="mt-2 text-xs text-cyber-text/75 sm:text-sm">
+            Hosting: Backend on Render.com, Frontend on Vercel.com, Database on Railway.com.
           </p>
         </div>
       </div>
@@ -41,7 +44,7 @@ function ProjectsSection() {
           GitHub
         </a>
         <a
-          href=""
+          href="https://astra-forge-ai.vercel.app"
           aria-label="Live demo"
           className="rounded-lg border border-cyber-violet/60 bg-cyber-violet/10 px-4 py-2 text-sm text-cyber-text transition hover:bg-cyber-violet/20"
         >
@@ -53,3 +56,4 @@ function ProjectsSection() {
 }
 
 export default ProjectsSection;
+
