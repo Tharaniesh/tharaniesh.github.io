@@ -12,7 +12,7 @@ html,
 body {
   margin: 0;
   min-height: 100vh;
-  background: #020617;
+  background: #03060d;
   color: #e2e8f0;
   font-family: 'Manrope', sans-serif;
 }
@@ -46,7 +46,7 @@ textarea {
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.24);
+  background: rgba(45, 212, 191, 0.24);
   color: #f8fafc;
 }
 
@@ -60,10 +60,10 @@ textarea {
 
 .surface-panel {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025)),
-    rgba(2, 6, 23, 0.76);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.052), rgba(255, 255, 255, 0.022)),
+    rgba(3, 6, 13, 0.78);
   border: 1px solid rgba(255, 255, 255, 0.09);
-  box-shadow: 0 20px 60px rgba(2, 6, 23, 0.35);
+  box-shadow: 0 20px 60px rgba(2, 6, 23, 0.34);
   backdrop-filter: blur(18px);
 }
 
@@ -76,8 +76,14 @@ textarea {
   mix-blend-mode: soft-light;
   background-image:
     radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.18) 0, transparent 24%),
-    radial-gradient(circle at 80% 0%, rgba(34, 211, 238, 0.08) 0, transparent 26%),
-    radial-gradient(circle at 50% 80%, rgba(192, 132, 252, 0.1) 0, transparent 24%);
+    radial-gradient(circle at 80% 0%, rgba(45, 212, 191, 0.08) 0, transparent 26%),
+    radial-gradient(circle at 50% 80%, rgba(244, 114, 182, 0.08) 0, transparent 24%);
+}
+
+@media (max-width: 640px) {
+  .surface-panel {
+    backdrop-filter: blur(12px);
+  }
 }
 
 .text-balance {

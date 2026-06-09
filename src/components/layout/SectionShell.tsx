@@ -27,9 +27,9 @@ export function SectionShell({
     <section id={id} className={`scroll-mt-28 ${className}`}>
       <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.45fr)] lg:gap-12">
         <Reveal className={`space-y-5 ${introClassName}`}>
-          <div className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-cyan-200/70">
+          <div className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-teal-200/70">
             <span>{index}</span>
-            <span className="h-px w-10 bg-gradient-to-r from-cyan-300/70 to-transparent" />
+            <span className="h-px w-10 bg-gradient-to-r from-teal-300/70 to-transparent" />
           </div>
           <div className="space-y-4">
             <h2 className="max-w-sm text-3xl font-semibold tracking-tight text-white sm:text-4xl">{title}</h2>

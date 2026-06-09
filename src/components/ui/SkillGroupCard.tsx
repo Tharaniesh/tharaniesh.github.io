@@ -14,7 +14,9 @@ export function SkillGroupCard({ group, index }: SkillGroupCardProps) {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: index * 0.05 }}
       whileHover={{ y: -4 }}
-      className="surface-panel group rounded-[1.8rem] p-6 transition duration-300"
+      className={`group rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-5 transition duration-300 hover:border-teal-200/25 hover:bg-white/[0.055] ${
+        index === 0 ? 'md:col-span-2' : ''
+      }`}
     >
       <div className="space-y-4">
         <div className="space-y-2">
@@ -26,7 +28,7 @@ export function SkillGroupCard({ group, index }: SkillGroupCardProps) {
           {group.items.map((item) => (
             <span
               key={item}
-              className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs tracking-[0.16em] text-slate-200/90 transition duration-300 group-hover:border-cyan-300/20 group-hover:bg-cyan-300/8"
+              className="rounded-full border border-white/10 bg-slate-950/40 px-3 py-1.5 text-xs tracking-[0.12em] text-slate-200/90 transition duration-300 group-hover:border-teal-300/20 group-hover:bg-teal-300/8"
             >
               {item}
             </span>

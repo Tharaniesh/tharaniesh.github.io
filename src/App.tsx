@@ -10,7 +10,10 @@ import { HeroSection } from './sections/HeroSection';
 const AboutSection = lazy(() => import('./sections/AboutSection'));
 const SkillsSection = lazy(() => import('./sections/SkillsSection'));
 const ProjectsSection = lazy(() => import('./sections/ProjectsSection'));
+const ServicesSection = lazy(() => import('./sections/ServicesSection'));
+const BuildSection = lazy(() => import('./sections/BuildSection'));
 const ModelPreviewSection = lazy(() => import('./sections/ModelPreviewSection'));
+const LearningJourneySection = lazy(() => import('./sections/LearningJourneySection'));
 const ContactSection = lazy(() => import('./sections/ContactSection'));
 
 function App() {
@@ -21,18 +24,18 @@ function App() {
       {loading && <Preloader onDone={() => setLoading(false)} />}
       <ScrollProgress />
       <AnimatedCursor />
-      <div className="relative min-h-screen overflow-x-hidden bg-slate-950 text-slate-100">
+      <div className="relative min-h-screen overflow-x-hidden bg-[#03060d] text-slate-100">
         <div className="noise-overlay" />
         <NavBar />
         <HeroSection />
 
-        <main className="mx-auto flex w-full max-w-6xl flex-col gap-28 px-4 pb-24 sm:px-6 lg:px-8">
+        <main className="mx-auto flex w-full max-w-6xl flex-col gap-24 px-4 pb-24 sm:px-6 lg:gap-32 lg:px-8">
           <Suspense fallback={null}>
             <SectionShell
               id="about"
               index="01"
-              title="A multidisciplinary practice built around visual clarity and interactive depth."
-              description="From interface systems to product presentation, the work is shaped to feel deliberate, modern, and technically grounded."
+              title="A multidisciplinary creator with a product-first mindset."
+              description="I combine development, design, branding, 3D creativity, and continuous learning to build digital experiences that feel useful, clear, and memorable."
             >
               <AboutSection />
             </SectionShell>
@@ -40,8 +43,8 @@ function App() {
             <SectionShell
               id="skills"
               index="02"
-              title="Capabilities curated for premium digital work."
-              description="The toolkit is intentionally grouped to reflect how design, frontend craft, and interactive systems come together in real projects."
+              title="Skills organized around the way digital products are actually built."
+              description="From backend logic and Android apps to brand systems and 3D visuals, each skill supports a broader product experience."
             >
               <SkillsSection />
             </SectionShell>
@@ -49,20 +52,38 @@ function App() {
             <SectionShell
               id="projects"
               index="03"
-              title="Selected work with stronger outcomes, structure, and visual presence."
-              description="A focused showcase spanning product concepts, packaging systems, recommendation logic, and immersive portfolio design."
-              introClassName="lg:max-w-[25rem]"
-              contentClassName="xl:-ml-8"
-              className="[&>div]:xl:grid-cols-[minmax(0,0.72fr)_minmax(0,1.7fr)]"
+              title="Featured projects presented as product stories."
+              description="Each project highlights the problem space, the technology used, and the value created through design and engineering."
+              introClassName="lg:max-w-[24rem]"
+              contentClassName="xl:-ml-4"
+              className="[&>div]:xl:grid-cols-[minmax(0,0.7fr)_minmax(0,1.75fr)]"
             >
               <ProjectsSection />
             </SectionShell>
 
             <SectionShell
-              id="preview"
+              id="services"
               index="04"
-              title="3D Preview"
-              description="Interactive model showcase from my Blender work"
+              title="Services for clients, startups, teams, and collaborators."
+              description="Focused, practical services that connect code, design, branding, website operations, and creative visualization."
+            >
+              <ServicesSection />
+            </SectionShell>
+
+            <SectionShell
+              id="build"
+              index="05"
+              title="The kinds of digital experiences I build."
+              description="A compact view of the outputs I can take from idea to interface, from brand to build, and from prototype to presentation."
+            >
+              <BuildSection />
+            </SectionShell>
+
+            <SectionShell
+              id="preview"
+              index="06"
+              title="3D creativity with a web-native presentation layer."
+              description="An interactive Blender model preview powered by Three.js, built to show creative depth without overwhelming the page."
               className="[&>div]:gap-6 [&>div]:lg:grid-cols-1"
               introClassName="max-w-3xl"
             >
@@ -70,10 +91,19 @@ function App() {
             </SectionShell>
 
             <SectionShell
+              id="journey"
+              index="07"
+              title="A learning journey built around curiosity and stronger systems."
+              description="The portfolio is not only a showcase of finished skills. It is also a signal of where my craft is heading next."
+            >
+              <LearningJourneySection />
+            </SectionShell>
+
+            <SectionShell
               id="contact"
-              index="05"
-              title="Let's build something with a clearer point of view."
-              description="For collaborations, freelance work, or concept-led builds, the portfolio is set up as a direct starting point."
+              index="08"
+              title="Let's build something useful, polished, and memorable."
+              description="Open for freelance projects, collaborations, startup partnerships, and business inquiries."
               introClassName="lg:max-w-[24rem]"
               contentClassName="xl:-ml-6"
               className="[&>div]:xl:grid-cols-[minmax(0,0.76fr)_minmax(0,1.56fr)]"

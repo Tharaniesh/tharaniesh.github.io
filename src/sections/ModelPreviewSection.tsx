@@ -304,7 +304,7 @@ export default function ModelPreviewSection() {
                   <div className="max-w-lg space-y-3">
                     <p className="text-xs uppercase tracking-[0.32em] text-orange-200/70">Texture mode</p>
                     <p className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
-                      This happens when I try to add texture to my model 😁
+                      This happens when I try to add texture to my model.
                     </p>
                     <p className="text-sm leading-7 text-slate-300">
                       The good news is the preview survived. The bad news is the material pipeline briefly chose chaos.

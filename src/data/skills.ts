@@ -6,23 +6,28 @@ export type SkillGroup = {
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: 'Design',
-    description: 'Interfaces and visual systems shaped for clarity, presence, and stronger brand expression.',
-    items: ['UI Design', 'Product Design', 'Visual Systems', 'Information Hierarchy', 'Layout Composition']
+    title: 'Software Development',
+    description: 'Full-stack and backend-aware development for practical digital products, APIs, and managed websites.',
+    items: ['Java', 'Python', 'Full Stack Development', 'MySQL', 'APIs', 'Website Management']
   },
   {
-    title: 'Development',
-    description: 'Frontend builds focused on maintainable architecture, responsiveness, and premium interaction quality.',
-    items: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Component Architecture']
+    title: 'Mobile Development',
+    description: 'Android application development with attention to usability, structure, and real-world workflows.',
+    items: ['Android Development', 'Java Apps', 'Mobile UI', 'App Architecture']
   },
   {
-    title: 'Creative Tech',
-    description: 'Motion and spatial design used intentionally to make interfaces feel immersive without becoming noisy.',
-    items: ['Three.js', 'React Three Fiber', 'Drei', 'Motion for React', 'Interactive Prototyping']
+    title: 'Design & Branding',
+    description: 'Interface, product, and identity design shaped around clarity, brand recall, and polished presentation.',
+    items: ['UI/UX Design', 'Logo Design', 'Brand Identity', 'Name Cards', 'Posters', 'Product Design']
   },
   {
-    title: 'Domain / Systems',
-    description: 'Structured thinking applied across recommendation logic, product communication, and decision-oriented design.',
-    items: ['Recommendation Systems', 'Game Design Thinking', 'Data-Informed UX', 'Spec Sheet Design', 'Workflow Structuring']
+    title: '3D & Creative',
+    description: 'Blender-based visual work for product visualization, creative assets, and spatial presentation.',
+    items: ['Blender', '3D Modeling', 'Product Visualization', 'Scene Composition']
+  },
+  {
+    title: 'Emerging Technologies',
+    description: 'A growing learning track across AI, game design, and modern architecture for future-facing builds.',
+    items: ['Artificial Intelligence', 'Game Design & Development', 'Modern Software Architecture']
   }
 ];

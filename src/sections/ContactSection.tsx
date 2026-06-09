@@ -54,17 +54,16 @@ function ContactSection() {
       <article className="min-w-0 surface-panel rounded-[2rem] p-5 sm:p-6">
         <div className="space-y-5">
           <div className="space-y-4">
-            <span className="inline-flex rounded-full border border-white/10 bg-white/6 px-3 py-1 text-[11px] uppercase tracking-[0.24em] text-cyan-100/75">
+            <span className="inline-flex rounded-full border border-white/10 bg-white/6 px-3 py-1 text-[11px] uppercase tracking-[0.24em] text-teal-100/75">
               Contact
             </span>
             <div className="space-y-3">
               <h3 className="max-w-[14ch] text-[1.9rem] font-semibold leading-[1.08] tracking-tight text-white sm:text-[2.3rem]">
-                Have a project, concept, or collaboration in mind?
+                Have a project, startup idea, or collaboration in mind?
               </h3>
               <p className="max-w-2xl text-sm leading-7 text-slate-300">
-                I&apos;m open to creative development work, UI-focused concepts, design execution, and interactive
-                portfolio or product experiences. If you&apos;re building something that needs stronger visual structure
-                and more intentional motion, let&apos;s talk.
+                I&apos;m open to freelance projects, business inquiries, startup partnerships, and collaborations across
+                websites, web applications, Android apps, UI/UX, branding, product design, and 3D visualization.
               </p>
             </div>
           </div>
@@ -76,7 +75,7 @@ function ContactSection() {
                 href={link.href}
                 target={link.href.startsWith('http') ? '_blank' : undefined}
                 rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
-                className="min-w-0 rounded-[1.25rem] border border-white/10 bg-white/5 px-4 py-4 text-sm transition hover:border-cyan-300/25 hover:bg-cyan-300/6"
+                className="min-w-0 rounded-[1.25rem] border border-white/10 bg-white/5 px-4 py-4 text-sm transition hover:border-teal-300/25 hover:bg-teal-300/6"
               >
                 <div className="flex min-w-0 items-start justify-between gap-4">
                   <span className="pt-0.5 uppercase tracking-[0.2em] text-slate-400">{link.label}</span>
@@ -117,8 +116,8 @@ function ContactSection() {
           </span>
           <h3 className="pt-1 text-2xl font-semibold tracking-tight text-white">Send a project inquiry</h3>
           <p className="max-w-xl text-sm leading-7 text-slate-300">
-            This form currently validates on the frontend and is ready for backend or email-service integration when
-            needed.
+            Share the type of project, timeline, and what you want to build. The form validates locally and is ready
+            for backend or email-service integration.
           </p>
         </div>
 
@@ -132,7 +131,7 @@ function ContactSection() {
                 autoComplete="name"
                 value={values.name}
                 onChange={(event) => setValues((current) => ({ ...current, name: event.target.value }))}
-                className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-slate-100 outline-none transition focus:border-cyan-300/45 focus:bg-white/7"
+                className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-slate-100 outline-none transition focus:border-teal-300/45 focus:bg-white/7"
               />
               {errors.name && <span className="text-xs text-rose-400">{errors.name}</span>}
             </label>
@@ -145,7 +144,7 @@ function ContactSection() {
                 autoComplete="email"
                 value={values.email}
                 onChange={(event) => setValues((current) => ({ ...current, email: event.target.value }))}
-                className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-slate-100 outline-none transition focus:border-cyan-300/45 focus:bg-white/7"
+                className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-slate-100 outline-none transition focus:border-teal-300/45 focus:bg-white/7"
               />
               {errors.email && <span className="text-xs text-rose-400">{errors.email}</span>}
             </label>
@@ -158,7 +157,7 @@ function ContactSection() {
               rows={4}
               value={values.message}
               onChange={(event) => setValues((current) => ({ ...current, message: event.target.value }))}
-              className="w-full resize-none rounded-[1.5rem] border border-white/10 bg-white/5 px-4 py-3 text-slate-100 outline-none transition focus:border-cyan-300/45 focus:bg-white/7"
+              className="w-full resize-none rounded-[1.5rem] border border-white/10 bg-white/5 px-4 py-3 text-slate-100 outline-none transition focus:border-teal-300/45 focus:bg-white/7"
             />
             {errors.message && <span className="text-xs text-rose-400">{errors.message}</span>}
           </label>
@@ -166,16 +165,16 @@ function ContactSection() {
           <div className="flex flex-wrap items-center gap-3 pt-1">
             <button
               type="submit"
-              className="inline-flex items-center justify-center rounded-full border border-cyan-300/30 bg-cyan-300/12 px-5 py-3 text-sm font-medium text-white transition hover:border-cyan-200/60 hover:bg-cyan-300/18"
+              className="inline-flex items-center justify-center rounded-full border border-teal-300/30 bg-teal-300/12 px-5 py-3 text-sm font-medium text-white transition hover:border-teal-200/60 hover:bg-teal-300/18"
             >
-              Validate Message
+              Validate Inquiry
             </button>
-            <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Frontend validation ready for backend wiring</p>
+            <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Frontend validation ready</p>
           </div>
 
           {submitted && (
             <p className="rounded-[1.25rem] border border-emerald-300/15 bg-emerald-300/8 px-4 py-3 text-sm leading-7 text-emerald-200">
-              Message details look valid. This form is currently frontend-only and ready to connect to a backend
+              Inquiry details look valid. This form is currently frontend-only and ready to connect to a backend
               handler or email workflow.
             </p>
           )}
